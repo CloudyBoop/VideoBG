@@ -20,7 +20,7 @@ namespace VideoBG
 
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
-            
+            if (buildIndex != 1) return;
             GameObject.Destroy(GameObject.Find("UserInterface/MenuContent/Backdrop/Backdrop/Background"));
             GameObject.Instantiate(ab.LoadAsset<GameObject>("Background"),
                 GameObject.Find("UserInterface/MenuContent/Backdrop/Backdrop").transform);
